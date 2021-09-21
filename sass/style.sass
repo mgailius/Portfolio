@@ -9,18 +9,21 @@ $poppins: 'Poppins', sans-serif
 $work-sans: 'Work Sans', sans-serif
 
 .wrapper
-    max-width: 1200px
+    max-width: 1300px
     margin: 0 auto
 
 html
     background-color: $black
 
-nav
-    color: $white
-    padding: 50px 0
-    display: flex
-    justify-content: center
-    align-items: center
+header
+    height: 100vh
+
+    nav
+        color: $white
+        padding: 70px 0
+        display: flex
+        justify-content: center
+        align-items: center
 
     ul
         list-style-type: none
@@ -30,9 +33,102 @@ nav
         display: flex
 
         li
-            margin: 0 20px
+            margin: 0 25px
             cursor: pointer
             transition: 200ms
             &:hover
                 transform: translateY(-2px)
                 color: $accent
+
+    .landing
+        margin-top: 100px
+        padding: 20px 0 0
+        //background: #111
+        font-family: $poppins
+        display: flex
+        justify-content: space-between
+        color: $white
+
+        &__info
+            //background: #333
+            max-width: 750px
+
+            &--name
+                padding-top: 50px
+                font-family: $work-sans
+                font-weight: 400
+                text-transform: uppercase
+                letter-spacing: 5px
+                width: fit-content
+
+                &::after
+                    content: ""
+                    display: block
+                    margin-top: 10px
+                    width: 98%
+                    height: 2px
+                    background: $gradient
+
+            &--title
+                font-weight: bold
+                font-size: 96px
+                line-height: 110%
+                margin-top: 15px
+
+            &--subtitle
+                font-size: 24px
+                line-height: 36px
+                letter-spacing: 5px
+                margin-top: 25px
+                font-weight: 300
+                color: #ccc
+
+            &__actions
+                display: flex
+                margin-top: 50px
+
+                &--action
+                    padding: 15px 50px
+                    font-size: 24px
+                    background: $gradient
+                    cursor: pointer
+                    transition: 200ms
+                    &:hover
+                        transform: translateY(-2px)
+
+                &--contact
+                    color: $black
+                    font-weight: bold
+                    border: 2px solid transparent
+
+                &--about
+                    margin-left: 40px
+                    font-weight: 600
+                    border: solid
+                    border-image-slice: 1
+                    border-width: 2px
+                    border-image-source: $gradient
+                    -webkit-background-clip: text
+                    -webkit-text-fill-color: transparent
+
+        &__picture
+            position: relative
+            width: 443px
+
+            &--square
+                position: absolute
+                left: -30px
+
+            &--portrait
+                z-index: 2
+                position: relative
+
+            &--circle
+                position: absolute
+                z-index: 3
+                bottom: -100px
+                right: -25px
+
+        &__scroll
+            display: block
+            margin: 150px auto 0
