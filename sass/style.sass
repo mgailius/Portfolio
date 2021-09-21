@@ -1,2 +1,38 @@
+//colors
+$black: #000
+$white: #fff
+$accent: #29FFD9
+$gradient: linear-gradient(90deg, #29FFD9 0%, #30F3FF 100%)
+
+//fonts
+$poppins: 'Poppins', sans-serif
+$work-sans: 'Work Sans', sans-serif
+
+.wrapper
+    max-width: 1200px
+    margin: 0 auto
+
 html
-    background-color: #000;
+    background-color: $black
+
+nav
+    color: $white
+    padding: 50px 0
+    display: flex
+    justify-content: center
+    align-items: center
+
+    ul
+        list-style-type: none
+        font-family: $poppins
+        font-size: 20px
+        font-weight: 300
+        display: flex
+
+        li
+            margin: 0 20px
+            cursor: pointer
+            transition: 200ms
+            &:hover
+                transform: translateY(-2px)
+                color: $accent

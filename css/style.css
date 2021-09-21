@@ -1,4 +1,36 @@
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 html {
   background-color: #000;
+}
+
+nav {
+  color: #fff;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 20px;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+nav ul li:hover {
+  transform: translateY(-2px);
+  color: #29FFD9;
 }
 /*# sourceMappingURL=style.css.map */
