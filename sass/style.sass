@@ -12,14 +12,42 @@ $work-sans: 'Work Sans', sans-serif
     max-width: 1300px
     margin: 0 auto
 
+.gradient-text
+    background: $gradient
+    font-weight: 400
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
 html
     background-color: $black
+    color: $white
+    font-family: $poppins
+
+    h3
+        font-size: 32px
+        font-weight: 600
+
+    h4
+        color: $white
+        margin: 0 auto
+        font-family: $work-sans
+        font-weight: 400
+        text-transform: uppercase
+        letter-spacing: 5px
+        width: fit-content
+
+        &::after
+            content: ""
+            display: block
+            margin-top: 10px
+            width: 98%
+            height: 2px
+            background: $gradient
 
 header
     height: 100vh
 
     nav
-        color: $white
         padding: 70px 0
         display: flex
         justify-content: center
@@ -43,39 +71,24 @@ header
     .landing
         margin-top: 100px
         padding: 20px 0 0
-        //background: #111
         font-family: $poppins
         display: flex
         justify-content: space-between
-        color: $white
 
         &__info
-            //background: #333
             max-width: 750px
 
-            &--name
+            h4
                 padding-top: 50px
-                font-family: $work-sans
-                font-weight: 400
-                text-transform: uppercase
-                letter-spacing: 5px
-                width: fit-content
+                margin: 0
 
-                &::after
-                    content: ""
-                    display: block
-                    margin-top: 10px
-                    width: 98%
-                    height: 2px
-                    background: $gradient
-
-            &--title
+            h1
                 font-weight: bold
                 font-size: 96px
                 line-height: 110%
                 margin-top: 15px
 
-            &--subtitle
+            h2
                 font-size: 24px
                 line-height: 36px
                 letter-spacing: 5px
@@ -83,11 +96,11 @@ header
                 font-weight: 300
                 color: #ccc
 
-            &__actions
+            &__cta
                 display: flex
                 margin-top: 50px
 
-                &--action
+                &__button
                     padding: 15px 50px
                     font-size: 24px
                     background: $gradient
@@ -96,20 +109,20 @@ header
                     &:hover
                         transform: translateY(-2px)
 
-                &--contact
-                    color: $black
-                    font-weight: bold
-                    border: 2px solid transparent
+                    &--contact
+                        color: $black
+                        font-weight: bold
+                        border: 2px solid transparent
 
-                &--about
-                    margin-left: 40px
-                    font-weight: 600
-                    border: solid
-                    border-image-slice: 1
-                    border-width: 2px
-                    border-image-source: $gradient
-                    -webkit-background-clip: text
-                    -webkit-text-fill-color: transparent
+                    &--about
+                        margin-left: 40px
+                        font-weight: 600
+                        border: solid
+                        border-image-slice: 1
+                        border-width: 2px
+                        border-image-source: $gradient
+                        -webkit-background-clip: text
+                        -webkit-text-fill-color: transparent
 
         &__picture
             position: relative
@@ -132,3 +145,24 @@ header
         &__scroll
             display: block
             margin: 150px auto 0
+
+main
+    .about
+        margin-top: 100px
+
+        &__info
+            margin: 100px 0
+            display: flex
+            justify-content: space-between
+
+            &__card
+                max-width: 320px
+                text-align: center
+
+                h3
+                    margin: 20px 0
+
+                p
+                    line-height: 30px
+                    font-weight: 300
+                    font-weight: 18px
