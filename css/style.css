@@ -188,4 +188,26 @@ main .about__info__card p {
   font-weight: 300;
   font-weight: 18px;
 }
+
+main .skills__info {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px 0;
+}
+
+main .skills__info__block ul {
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+
+main .skills__info__block ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+main .skills__info__block ul li img {
+  margin-right: 20px;
+  width: 40px;
+}
 /*# sourceMappingURL=style.css.map */
