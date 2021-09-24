@@ -22,6 +22,7 @@ html
     background-color: $black
     color: $white
     font-family: $poppins
+    scroll-behavior: smooth
 
     h3
         font-size: 32px
@@ -62,11 +63,14 @@ header
 
         li
             margin: 0 25px
-            cursor: pointer
             transition: 200ms
             &:hover
                 transform: translateY(-2px)
                 color: $accent
+
+            a
+                text-decoration: none
+                color: inherit
 
     .landing
         margin-top: 100px
