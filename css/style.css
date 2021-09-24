@@ -210,4 +210,48 @@ main .skills__info__block ul li img {
   margin-right: 20px;
   width: 40px;
 }
+
+main .projects__container {
+  margin: 100px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
+main .projects__container__project {
+  position: relative;
+  overflow: hidden;
+}
+
+main .projects__container__project__overlay {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  padding: 20px;
+  transition: 200ms;
+}
+
+main .projects__container__project__overlay:hover {
+  opacity: 1;
+}
+
+main .projects__container__project__overlay p {
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+main .projects__container__project__overlay a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+main .projects__container__project img {
+  width: 100%;
+}
 /*# sourceMappingURL=style.css.map */
