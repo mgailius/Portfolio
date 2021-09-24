@@ -266,4 +266,9 @@ main .contacts__links img {
   width: 40px;
   margin: 0 20px;
 }
+
+footer {
+  text-align: center;
+  padding-bottom: 20px;
+}
 /*# sourceMappingURL=style.css.map */
