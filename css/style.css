@@ -254,4 +254,16 @@ main .projects__container__project__overlay a {
 main .projects__container__project img {
   width: 100%;
 }
+
+main .contacts__links {
+  margin: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .contacts__links img {
+  width: 40px;
+  margin: 0 20px;
+}
 /*# sourceMappingURL=style.css.map */
