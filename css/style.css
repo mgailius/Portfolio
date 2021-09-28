@@ -176,6 +176,7 @@ header .landing__picture--circle {
 header .landing__scroll {
   display: block;
   margin: 150px auto 0;
+  animation: scroll 2s ease-in-out infinite;
 }
 
 main .about {
@@ -289,6 +290,18 @@ footer {
 footer .heart {
   animation: pulse 0.7s linear infinite;
   display: inline-block;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes pulse {
