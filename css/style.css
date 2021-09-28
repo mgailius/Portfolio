@@ -291,6 +291,11 @@ main .contacts__links {
 main .contacts__links img {
   width: 40px;
   margin: 0 20px;
+  transition: 100ms ease-in-out;
+}
+
+main .contacts__links img:hover {
+  transform: translateY(-3px);
 }
 
 footer {
