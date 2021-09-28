@@ -285,4 +285,18 @@ footer {
   text-align: center;
   padding-bottom: 20px;
 }
+
+footer .heart {
+  animation: pulse 0.7s linear infinite;
+  display: inline-block;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.2);
+  }
+}
 /*# sourceMappingURL=style.css.map */
