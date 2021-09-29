@@ -43,7 +43,7 @@ function initProjects() {
 			'Currency Converter',
 			'My project',
 			'img/projects/converter.png',
-			'https://htmlpreview.github.io/?https://github.com/mgailius/Currency-Converter/blob/main/index.html'
+			'https://mgailius.github.io/Currency-Converter/'
 		)
 	);
 }
