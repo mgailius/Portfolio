@@ -19,7 +19,7 @@ function initProjects() {
 			'Holiday Finder',
 			'Design Replication',
 			'img/projects/travel.png',
-			'https://htmlpreview.github.io/?https://github.com/mgailius/Design-Replications/blob/main/Holiday%20Finder/index.html'
+			'https://mgailius.github.io/Holiday-Finder/'
 		)
 	);
 	projects.push(
@@ -27,7 +27,7 @@ function initProjects() {
 			'Digits',
 			'Design Replication',
 			'img/projects/digits.png',
-			'https://htmlpreview.github.io/?https://github.com/mgailius/Design-Replications/blob/main/Digits/index.html'
+			'https://mgailius.github.io/Digits/'
 		)
 	);
 	projects.push(
@@ -35,7 +35,7 @@ function initProjects() {
 			'Žalioji Virtuvė',
 			'My first project',
 			'img/projects/zalvir.png',
-			'https://zaliojivirtuve.netlify.app/'
+			'https://mgailius.github.io/zalioji-virtuve/'
 		)
 	);
 	projects.push(
