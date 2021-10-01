@@ -5,6 +5,7 @@
 }
 
 .gradient-text {
+  background: -webkit-gradient(linear, left top, right top, from(#29FFD9), to(#30F3FF));
   background: linear-gradient(90deg, #29FFD9 0%, #30F3FF 100%);
   font-weight: 400;
   -webkit-background-clip: text;
@@ -30,6 +31,8 @@ html h4 {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -39,6 +42,7 @@ html h4::after {
   margin-top: 10px;
   width: 98%;
   height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(#29FFD9), to(#30F3FF));
   background: linear-gradient(90deg, #29FFD9 0%, #30F3FF 100%);
 }
 
@@ -48,9 +52,15 @@ header {
 
 header nav {
   padding: 70px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header ul {
@@ -58,16 +68,20 @@ header ul {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 header ul li {
   margin: 0 25px;
+  -webkit-transition: 200ms;
   transition: 200ms;
 }
 
 header ul li:hover {
-  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
   color: #29FFD9;
 }
 
@@ -80,8 +94,12 @@ header .landing {
   margin-top: 100px;
   padding: 20px 0 0;
   font-family: "Poppins", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 header .landing__info {
@@ -110,6 +128,8 @@ header .landing__info h2 {
 }
 
 header .landing__info__cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 50px;
 }
@@ -118,13 +138,16 @@ header .landing__info__cta__button {
   position: relative;
   padding: 15px 50px;
   font-size: 24px;
+  background: -webkit-gradient(linear, left top, right top, from(#29FFD9), to(#30F3FF));
   background: linear-gradient(90deg, #29FFD9 0%, #30F3FF 100%);
   cursor: pointer;
+  -webkit-transition: 200ms;
   transition: 200ms;
 }
 
 header .landing__info__cta__button:hover {
-  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 
 header .landing__info__cta__button--contact {
@@ -177,7 +200,8 @@ header .landing__picture--circle {
 header .landing__scroll {
   display: block;
   margin: 150px auto 0;
-  animation: scroll 2s ease-in-out infinite;
+  -webkit-animation: scroll 2s ease-in-out infinite;
+          animation: scroll 2s ease-in-out infinite;
 }
 
 main .about {
@@ -186,8 +210,12 @@ main .about {
 
 main .about__info {
   margin: 100px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 main .about__info__card {
@@ -216,8 +244,12 @@ main .mission p {
 }
 
 main .skills__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 100px 0;
 }
 
@@ -227,8 +259,12 @@ main .skills__info__block ul {
 }
 
 main .skills__info__block ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 10px;
 }
 
@@ -239,8 +275,10 @@ main .skills__info__block ul li img {
 
 main .projects__container {
   margin: 100px 0;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
 
@@ -257,6 +295,7 @@ main .projects__container__project__overlay {
   background: rgba(0, 0, 0, 0.8);
   top: 0;
   padding: 20px;
+  -webkit-transition: 200ms;
   transition: 200ms;
 }
 
@@ -283,19 +322,27 @@ main .projects__container__project img {
 
 main .contacts__links {
   margin: 100px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main .contacts__links img {
-  width: 0px;
+  width: 50px;
   margin: 0 20px;
+  -webkit-transition: 100ms ease-in-out;
   transition: 100ms ease-in-out;
 }
 
 main .contacts__links img:hover {
-  transform: translateY(-3px);
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
 }
 
 footer {
@@ -304,28 +351,60 @@ footer {
 }
 
 footer .heart {
-  animation: pulse 0.7s linear infinite;
+  -webkit-animation: pulse 0.7s linear infinite;
+          animation: pulse 0.7s linear infinite;
   display: inline-block;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  70% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 @keyframes scroll {
   0% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   70% {
-    transform: translateY(15px);
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
   }
   100% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  10% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 }
 
 @keyframes pulse {
   0% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   10% {
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 }
 /*# sourceMappingURL=style.css.map */
