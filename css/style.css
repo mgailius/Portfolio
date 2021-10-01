@@ -241,7 +241,7 @@ main .projects__container {
   margin: 100px 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
+  gap: 10px;
 }
 
 main .projects__container__project {
@@ -289,7 +289,7 @@ main .contacts__links {
 }
 
 main .contacts__links img {
-  width: 50px;
+  width: 0px;
   margin: 0 20px;
   transition: 100ms ease-in-out;
 }
