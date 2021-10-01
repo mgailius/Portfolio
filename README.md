@@ -1,3 +1,5 @@
 # Portfolio
 
-[Visit Site](https://htmlpreview.github.io/?https://github.com/mgailius/Portfolio/blob/main/index.html)
+My personal [website](https://martynasgailius.com)
+
+![Landing Screen Shot](img/landing/landingss.png)
