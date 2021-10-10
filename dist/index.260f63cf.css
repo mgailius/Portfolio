@@ -68,11 +68,6 @@ body img {
     margin: 0 auto;
   }
 }
-@media screen and (max-width: 600px) {
-  h3 {
-    margin: 0;
-  }
-}
 header nav ul {
   display: flex;
   justify-content: center;
@@ -135,7 +130,7 @@ header .landing__left__buttons a:hover {
 @media screen and (max-width: 600px) {
   header .landing {
     padding-top: 10px;
-    align-items: flex-start;
+    align-items: center;
   }
   header .landing h1 {
     font-size: 2.25rem;
@@ -149,7 +144,7 @@ header .landing__left__buttons a:hover {
   }
 }
 .about {
-  margin-top: 140px;
+  padding-top: 140px;
 }
 .about__cards {
   margin-top: 40px;
@@ -164,6 +159,7 @@ header .landing__left__buttons a:hover {
 
 @media screen and (max-width: 950px) {
   .about {
+    padding-top: 70px;
     text-align: center;
   }
   .about__cards {
@@ -178,20 +174,8 @@ header .landing__left__buttons a:hover {
     padding: 20px;
   }
 }
-@media screen and (max-width: 600px) {
-  .about {
-    margin-top: 50px;
-    text-align: left;
-  }
-  .about__cards {
-    justify-content: space-between;
-  }
-  .about__cards__card {
-    padding: 0 0 30px 0;
-  }
-}
 .mission {
-  margin-top: 100px;
+  padding-top: 100px;
 }
 .mission__block {
   margin-top: 50px;
@@ -217,16 +201,17 @@ header .landing__left__buttons a:hover {
     padding: 20px 50px;
   }
   .mission__block img {
-    width: 250px;
+    max-width: 250px;
   }
 }
 @media screen and (max-width: 600px) {
   .mission {
-    margin-top: 50px;
+    padding-top: 50px;
+    text-align: center;
   }
   .mission__block {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
   .mission__block:last-child .mission__block__text {
     order: 2;
@@ -236,6 +221,43 @@ header .landing__left__buttons a:hover {
   }
   .mission__block img {
     width: 250px;
+  }
+}
+.skills {
+  padding-top: 100px;
+}
+.skills__container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.skills__container h4 {
+  margin-bottom: 10px;
+}
+.skills__container ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 0.9375rem;
+  text-transform: uppercase;
+}
+.skills__container ul li img {
+  width: 35px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .skills {
+    padding-top: 50px;
+    text-align: left;
+  }
+  .skills__container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .skills__container__block {
+    padding: 20px;
   }
 }
 /*# sourceMappingURL=index.260f63cf.css.map */

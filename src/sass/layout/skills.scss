@@ -1,0 +1,47 @@
+@use '../abstracts' as a;
+
+.skills {
+    padding-top: 100px;
+
+    &__container {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        h4 {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                font-size: a.$paragraph;
+                text-transform: uppercase;
+
+                img {
+                    width: 35px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .skills {
+        padding-top: 50px;
+        text-align: left;
+
+        &__container {
+            justify-content: center;
+            flex-wrap: wrap;
+
+            &__block {
+                padding: 20px;
+            }
+        }
+    }
+}
