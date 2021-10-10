@@ -1,0 +1,61 @@
+@use '../abstracts' as a;
+
+.about {
+    margin-top: 140px;
+
+    &__cards {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+        &__card {
+            max-width: 280px;
+
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .about {
+
+        text-align: center;
+        &__cards {
+            justify-content: center;
+
+            &__card {
+                padding: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .about {
+        &__cards {
+
+            &__card {
+                padding: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about {
+        margin-top: 50px;
+        text-align: left;
+
+        &__cards {
+            justify-content: space-between;
+
+            &__card {
+                padding: 0 0 30px 0;
+            }
+        }
+    }
+}

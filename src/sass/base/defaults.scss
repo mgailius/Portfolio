@@ -12,7 +12,7 @@ html {
 
 .wrapper {
     max-width: 1000px;
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -20,11 +20,27 @@ body {
     font-family: a.$poppins;
     color: a.$black;
 
-    h1,h3 {font-family: a.$playfair;}
+    h1 {
+        font-size: a.$h1;
+        font-family: a.$playfair;
+    }
 
-    h1 {font-size: a.$h1;}
     h2 {font-size: a.$h2;}
-    h3 {font-size: a.$h3;}
+
+    h3 {
+        font-size: a.$h3;
+        width: fit-content;
+        font-family: a.$playfair;
+
+        &::after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: a.$complementary;
+        }
+    }
+
     h4 {font-size: a.$h4;}
 
     ul {list-style-type: none;}
@@ -40,5 +56,15 @@ body {
     }
 }
 
+@media screen and (max-width: 950px) {
+    h3 {
+        margin: 0 auto;
+    }
+}
 
+@media screen and (max-width: 600px) {
+    h3 {
+        margin: 0;
+    }
+}
 

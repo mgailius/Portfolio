@@ -43,6 +43,7 @@ header {
             }
 
             p {
+                font-size: a.$paragraph;
                 max-width: 350px;
             }
 
@@ -74,7 +75,7 @@ header {
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
     header {
         .landing {
             flex-direction: column;
@@ -87,7 +88,7 @@ header {
     }
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 600px) {
     header {
         .landing {
             padding-top: 10px;
