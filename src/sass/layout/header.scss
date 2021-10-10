@@ -1,0 +1,109 @@
+@use '../abstracts' as a;
+
+header {
+    nav {
+        ul {
+            display: flex;
+            justify-content: center;
+
+            li {
+                padding: 2rem 1rem;
+
+                a {
+                    display: inline-block;
+                    transition: 200ms;
+    
+                    &:hover {
+                        transform: translateY(-2px);
+                    }
+                }
+            }
+
+            
+
+            .active {
+                font-weight: a.$bold;
+                color: a.$primary;
+            }
+
+        }
+    }
+    .landing {
+        width: 100%;
+        padding-top: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__left {
+            h2 {
+                font-weight: normal;
+                text-transform: uppercase;
+                padding: 0.25rem 0;
+            }
+
+            p {
+                max-width: 350px;
+            }
+
+            &__buttons {
+                margin-top: 40px;
+                display: flex;
+                align-items: center;
+
+                &--reachout {
+                    background-color: a.$primary;
+                    padding: 10px 35px;
+                    font-weight: a.$medium;
+                }
+
+                &--cv {
+                    font-weight: a.$medium;
+                    margin: 0 35px;
+                }
+
+                a {
+                    transition: 200ms;
+                }
+
+                a:hover {
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header {
+        .landing {
+            flex-direction: column;
+            align-items: center;
+            
+            &__left {
+                order: 2;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 530px) {
+    header {
+        .landing {
+            padding-top: 10px;
+            align-items: flex-start;
+    
+            h1 {font-size: 2.25rem;}
+            h2 {font-size: 1rem;}
+
+            p {
+                font-size: a.$paragraph;
+            }
+    
+            img {
+                margin-bottom: 20px;
+                width: 200px;
+            }
+        }
+    }
+}
