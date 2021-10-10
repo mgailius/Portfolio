@@ -8,6 +8,7 @@
   "source": "src/index.html",
   "scripts": {
     "dev": "parcel",
+    "watch": "parcel watch",
     "build": "parcel build"
   },
   "devDependencies": {
