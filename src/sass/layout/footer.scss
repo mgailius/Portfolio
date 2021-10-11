@@ -1,0 +1,23 @@
+@use '../abstracts' as a;
+
+footer {
+    text-align: center;
+    padding: 20px;
+
+    span {
+        display: inline-block;
+        animation: pulse 1s linear infinite;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

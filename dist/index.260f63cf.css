@@ -435,4 +435,24 @@ header .landing__left__buttons a:hover {
     padding: 15px 35px;
   }
 }
+footer {
+  text-align: center;
+  padding: 20px;
+}
+footer span {
+  display: inline-block;
+  animation: pulse 1s linear infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /*# sourceMappingURL=index.260f63cf.css.map */
