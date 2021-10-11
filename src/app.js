@@ -18,7 +18,7 @@ function initProjects() {
 		new Project(
 			'Holiday Finder',
 			'Design Replication',
-			'img/projects/travel.png',
+			'img/travel.png',
 			'https://mgailius.github.io/Holiday-Finder/'
 		)
 	);
@@ -26,7 +26,7 @@ function initProjects() {
 		new Project(
 			'Digits',
 			'Design Replication',
-			'img/projects/digits.png',
+			'img/digits.png',
 			'https://mgailius.github.io/Digits/'
 		)
 	);
@@ -34,7 +34,7 @@ function initProjects() {
 		new Project(
 			'Žalioji Virtuvė',
 			'My first project',
-			'img/projects/zalvir.png',
+			'img/zalvir.png',
 			'https://mgailius.github.io/zalioji-virtuve/'
 		)
 	);
@@ -42,7 +42,7 @@ function initProjects() {
 		new Project(
 			'Currency Converter',
 			'My project',
-			'img/projects/converter.png',
+			'img/converter.png',
 			'https://mgailius.github.io/Currency-Converter/'
 		)
 	);
@@ -54,8 +54,8 @@ function displayProjects() {
 			'beforeend',
 			`<div class="projects__container__project">
                 <img src="${projects[i].image}" alt="${projects[i].title}">
-                <div class="projects__container__project__overlay">
-                    <h3>${projects[i].title}</h3>
+                <div class="projects__container__project__info">
+                    <h4>${projects[i].title}</h4>
                     <p class="gradient-text">${projects[i].subtitle}</p>
                     <a target="_blank" href="${projects[i].link}"></a>
                 </div>
