@@ -1,0 +1,74 @@
+@use '../abstracts' as a;
+
+.projects {
+    padding-top: 100px;
+
+    &__container {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 50px;
+
+        &__card {
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            transition: 200ms;
+
+            &:hover &__image img {
+                filter: brightness(1);
+            }
+
+            &__image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 200px;
+                overflow: hidden;
+
+                img {
+                    transition: 200ms;
+                    filter: brightness(0.98);
+                    transform: scale(1.2);
+                }
+            }
+
+            &__info {
+                padding: 10px;
+
+                p {
+                    padding-bottom: 10px;
+                }
+
+                &__buttons {
+                    display: flex;
+                    align-items: center;
+                    font-weight: a.$medium;
+
+                    >:first-child {
+                        display: block;
+                        background-color: a.$primary;
+                        padding: 10px 20px;
+                    }
+                    >:last-child {
+                        margin-left: 20px;
+                    }
+                    >* {
+                        transition: 200ms;
+                    }
+                    >*:hover {
+                        transform: translateY(-2px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .projects {
+        padding-top: 50px;
+        
+        &__container {
+            gap: 30px;
+        }
+    }
+}

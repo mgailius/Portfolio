@@ -46,7 +46,10 @@ body {
         }
     }
 
-    h4 {font-size: a.$h4;}
+    h4 {
+        font-size: a.$h4;
+        font-weight: a.$medium;
+    }
 
     ul {list-style-type: none;}
 

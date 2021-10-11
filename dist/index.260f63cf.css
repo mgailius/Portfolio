@@ -46,6 +46,7 @@ body h3::after {
 }
 body h4 {
   font-size: 1rem;
+  font-weight: 500;
 }
 body ul {
   list-style-type: none;
@@ -109,7 +110,7 @@ header .landing__left__buttons--reachout {
 }
 header .landing__left__buttons--cv {
   font-weight: 500;
-  margin: 0 35px;
+  margin-left: 35px;
 }
 header .landing__left__buttons a {
   transition: 200ms;
@@ -119,6 +120,9 @@ header .landing__left__buttons a:hover {
 }
 
 @media screen and (max-width: 950px) {
+  header nav {
+    display: none;
+  }
   header .landing {
     flex-direction: column;
     align-items: center;
@@ -141,6 +145,12 @@ header .landing__left__buttons a:hover {
   header .landing img {
     margin-bottom: 20px;
     width: 200px;
+  }
+  header .landing__left__buttons--reachout {
+    padding: 10px 20px;
+  }
+  header .landing__left__buttons--cv {
+    margin-left: 20px;
   }
 }
 .about {
@@ -258,6 +268,68 @@ header .landing__left__buttons a:hover {
   }
   .skills__container__block {
     padding: 20px;
+  }
+}
+.projects {
+  padding-top: 100px;
+}
+.projects__container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+}
+.projects__container__card {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: 200ms;
+}
+.projects__container__card:hover .projects__container__card__image img {
+  filter: brightness(1);
+}
+.projects__container__card__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  overflow: hidden;
+}
+.projects__container__card__image img {
+  transition: 200ms;
+  filter: brightness(0.98);
+  transform: scale(1.2);
+}
+.projects__container__card__info {
+  padding: 10px;
+}
+.projects__container__card__info p {
+  padding-bottom: 10px;
+}
+.projects__container__card__info__buttons {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+.projects__container__card__info__buttons > :first-child {
+  display: block;
+  background-color: #0496FF;
+  padding: 10px 20px;
+}
+.projects__container__card__info__buttons > :last-child {
+  margin-left: 20px;
+}
+.projects__container__card__info__buttons > * {
+  transition: 200ms;
+}
+.projects__container__card__info__buttons > *:hover {
+  transform: translateY(-2px);
+}
+
+@media screen and (max-width: 600px) {
+  .projects {
+    padding-top: 50px;
+  }
+  .projects__container {
+    gap: 30px;
   }
 }
 /*# sourceMappingURL=index.260f63cf.css.map */

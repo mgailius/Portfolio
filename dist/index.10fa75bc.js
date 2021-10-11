@@ -457,28 +457,84 @@ function hmrAcceptRun(bundle, id) {
 },{}],"g1M29":[function(require,module,exports) {
 let projects = [];
 class Project {
-    constructor(title, subtitle, image, link){
+    constructor(title, description, image, link, code){
         this.title = title;
-        this.subtitle = subtitle;
+        this.description = description;
         this.image = image;
         this.link = link;
+        this.code = code;
     }
 }
 const UI = {
     projects: document.querySelector('.projects__container')
 };
 function initProjects() {
-    projects.push(new Project('Holiday Finder', 'Design Replication', 'img/travel.png', 'https://mgailius.github.io/Holiday-Finder/'));
-    projects.push(new Project('Digits', 'Design Replication', 'img/digits.png', 'https://mgailius.github.io/Digits/'));
-    projects.push(new Project('Žalioji Virtuvė', 'My first project', 'img/zalvir.png', 'https://mgailius.github.io/zalioji-virtuve/'));
-    projects.push(new Project('Currency Converter', 'My project', 'img/converter.png', 'https://mgailius.github.io/Currency-Converter/'));
+    projects.push(new Project('Digits', 'A website design replication for a fictional design agency', new URL(require("2747087ae31630ac")), 'https://mgailius.github.io/Digits/', 'https://github.com/mgailius/Digits'));
+    projects.push(new Project('Trafalgar', 'A website design replication for a fictional healthcare institution', new URL(require("8abd61d9ce217c3f")), 'https://mgailius.github.io/Trafalgar/', 'https://github.com/mgailius/Trafalgar'));
+    projects.push(new Project('Holiday Finder', 'A website design replication for a fictional travel agency', new URL(require("b93e4beaca1ea2ad")), 'https://mgailius.github.io/Holiday-Finder/', 'https://github.com/mgailius/Holiday-Finder'));
+    projects.push(new Project('Hangman', 'Three level difficulty hangman game built with JavaScript', new URL(require("b3f0a952c65bbc11")), 'https://mgailius.github.io/Hangman/', 'https://github.com/mgailius/Hangman'));
+    projects.push(new Project('Žalioji Virtuvė', 'Website for a vegan/vegetarian restaurant (closed)', new URL(require("3f5c39c21f2a8b0f")), 'https://mgailius.github.io/zalioji-virtuve/', 'https://github.com/mgailius/zalioji-virtuve/'));
+    projects.push(new Project('Currency Converter', 'Euro / Dollar / Pound converter built with JavaScript', new URL(require("2da224b5005db528")), 'https://mgailius.github.io/Currency-Converter/', 'https://github.com/mgailius/Currency-Converter/'));
 }
 function displayProjects() {
-    for(let i = 0; i < projects.length; i++)UI.projects.insertAdjacentHTML('beforeend', `<div class="projects__container__project">\n                <img src="${projects[i].image}" alt="${projects[i].title}">\n                <div class="projects__container__project__info">\n                    <h4>${projects[i].title}</h4>\n                    <p class="gradient-text">${projects[i].subtitle}</p>\n                    <a target="_blank" href="${projects[i].link}"></a>\n                </div>\n            </div>`);
+    for(let i = 0; i < projects.length; i++)UI.projects.insertAdjacentHTML('beforeend', `<div class="projects__container__card">\n				<div class="projects__container__card__image">\n					<img src="${projects[i].image}" alt="${projects[i].name}">\n				</div>\n				<div class="projects__container__card__info">\n					<h4>${projects[i].title}</h4>\n					<p>${projects[i].description}</p>\n					<div class="projects__container__card__info__buttons">\n						<a target="_blank" href="${projects[i].link}">View Site</a>\n						<a target="_blank" href="${projects[i].code}">View Code</a>\n					</div>\n				</div>\n			</div>`);
 }
 initProjects();
 displayProjects();
 
-},{}]},["5MabY","g1M29"], "g1M29", "parcelRequire2041")
+},{"2747087ae31630ac":"8qr7H","3f5c39c21f2a8b0f":"hN8mj","2da224b5005db528":"jpT0W","b3f0a952c65bbc11":"c2QMw","8abd61d9ce217c3f":"7sRCY","b93e4beaca1ea2ad":"6URvd"}],"8qr7H":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('iyXWO') + "digits.02655b49.png";
+
+},{"./helpers/bundle-url":"8YnfL"}],"8YnfL":[function(require,module,exports) {
+"use strict";
+var bundleURL = {
+};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return '/';
+}
+function getBaseURL(url) {
+    return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ('' + url).match(/(https?|file|ftp):\/\/[^/]+/);
+    if (!matches) throw new Error('Origin not found');
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"hN8mj":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('iyXWO') + "zalvir.9e041631.png";
+
+},{"./helpers/bundle-url":"8YnfL"}],"jpT0W":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('iyXWO') + "converter.afe3bda6.png";
+
+},{"./helpers/bundle-url":"8YnfL"}],"c2QMw":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('iyXWO') + "hangman.473040f2.png";
+
+},{"./helpers/bundle-url":"8YnfL"}],"7sRCY":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('iyXWO') + "health.eb3b3c93.png";
+
+},{"./helpers/bundle-url":"8YnfL"}],"6URvd":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('iyXWO') + "travel.43d9b35e.png";
+
+},{"./helpers/bundle-url":"8YnfL"}]},["5MabY","g1M29"], "g1M29", "parcelRequire2041")
 
 //# sourceMappingURL=index.10fa75bc.js.map
