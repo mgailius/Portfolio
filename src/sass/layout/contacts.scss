@@ -1,0 +1,125 @@
+@use '../abstracts' as a;
+
+.contacts {
+    padding-top: 100px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+
+        &__links {
+            width: 650px;
+            display: flex;
+            flex-direction: column;
+            
+
+            &--cv {
+                padding: 30px;
+                font-weight: a.$medium;
+                background-color: a.$primary;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+
+                a {
+                    display: block;
+                    padding: 10px 20px;
+                    background-color: a.$black;
+                    color: #fff;
+                    transition: 200ms;
+
+                    &:hover {
+                        transform: translateY(-2px);
+                    }
+                }
+            }
+
+            ul {
+                margin-top: 20px;
+                li {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
+
+                    img {
+                        width: 35px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+        form {
+            margin-right: 20px;
+            min-width: 300px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+
+            input, textarea {
+                background-color: a.$grey-light;
+                padding: 10px 20px;
+                color: a.$black;
+            }
+
+            textarea {
+                min-height: 150px;
+            }
+
+            >* {
+                border: none;
+                font-family: a.$poppins;
+                margin-bottom: 10px;
+                font-size: a.$paragraph;
+            }
+
+            button {
+                width: fit-content;
+                background-color: a.$primary;
+                padding: 10px 25px;
+                cursor: pointer;
+                transition: 200ms;
+
+                &:hover {
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .contacts {
+        padding-top: 50px;
+    
+        &__container {
+            justify-content: center;
+            flex-wrap: wrap;
+
+            &__links {
+                &--cv {
+                    text-align: center;
+                    order: 2;
+                    padding: 30px;
+                    justify-content: center;
+
+                    h2 {
+                        font-size: 1.25rem;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
+            form {
+                margin: 0;
+                width: 100%;
+                button {
+                    align-self: center;
+                    padding: 15px 35px;
+                }
+            }
+        }
+    }
+}

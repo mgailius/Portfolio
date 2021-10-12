@@ -1,0 +1,42 @@
+@use '../abstracts' as a;
+
+.about {
+    padding-top: 140px;
+
+    &__cards {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+        &__card {
+            max-width: 280px;
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .about {
+        padding-top: 70px;
+        text-align: center;
+        &__cards {
+            justify-content: center;
+
+            &__card {
+                padding: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .about {
+        &__cards {
+
+            &__card {
+                padding: 20px;
+            }
+        }
+    }
+}
