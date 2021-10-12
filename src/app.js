@@ -1,3 +1,28 @@
+'use strict';
+
+//DOM ELEMENTS
+
+const UI = {
+	projects: document.querySelector('.projects__container'),
+	mobilenav: document.querySelector('.mobilenav'),
+	nav: document.querySelector('.nav'),
+	navlink: document.querySelectorAll('.navlink')
+};
+
+//NAVIGATION FUNCTIONALITY
+
+const toggleNav = () => {
+	UI.nav.classList.toggle('mobile')
+	UI.mobilenav.classList.toggle('close');
+};
+
+UI.mobilenav.addEventListener('click', toggleNav);
+
+for(const link of UI.navlink) link.addEventListener('click', toggleNav);
+
+
+//PROJECT LOADING
+
 let projects = [];
 
 class Project {
@@ -9,10 +34,6 @@ class Project {
 		this.code = code;
 	}
 }
-
-const UI = {
-	projects: document.querySelector('.projects__container'),
-};
 
 function initProjects() {
 	projects.push(
@@ -72,6 +93,7 @@ function initProjects() {
 }
 
 function displayProjects() {
+	initProjects();
 	for (let i = 0; i < projects.length; i++) {
 		UI.projects.insertAdjacentHTML(
 			'beforeend',
@@ -92,5 +114,4 @@ function displayProjects() {
 	}
 }
 
-initProjects();
 displayProjects();

@@ -455,19 +455,32 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"g1M29":[function(require,module,exports) {
+'use strict';
+//DOM ELEMENTS
+const UI = {
+    projects: document.querySelector('.projects__container'),
+    mobilenav: document.querySelector('.mobilenav'),
+    nav: document.querySelector('.nav'),
+    navlink: document.querySelectorAll('.navlink')
+};
+//NAVIGATION FUNCTIONALITY
+const toggleNav = ()=>{
+    UI.nav.classList.toggle('mobile');
+    UI.mobilenav.classList.toggle('close');
+};
+UI.mobilenav.addEventListener('click', toggleNav);
+for (const link of UI.navlink)link.addEventListener('click', toggleNav);
+//PROJECT LOADING
 let projects = [];
 class Project {
-    constructor(title, description, image, link, code){
+    constructor(title, description, image, link1, code){
         this.title = title;
         this.description = description;
         this.image = image;
-        this.link = link;
+        this.link = link1;
         this.code = code;
     }
 }
-const UI = {
-    projects: document.querySelector('.projects__container')
-};
 function initProjects() {
     projects.push(new Project('Digits', 'A website design replication for a fictional design agency', new URL(require("2747087ae31630ac")), 'https://mgailius.github.io/Digits/', 'https://github.com/mgailius/Digits'));
     projects.push(new Project('Trafalgar', 'A website design replication for a fictional healthcare institution', new URL(require("8abd61d9ce217c3f")), 'https://mgailius.github.io/Trafalgar/', 'https://github.com/mgailius/Trafalgar'));
@@ -477,9 +490,9 @@ function initProjects() {
     projects.push(new Project('Currency Converter', 'Euro / Dollar / Pound converter built with JavaScript', new URL(require("2da224b5005db528")), 'https://mgailius.github.io/Currency-Converter/', 'https://github.com/mgailius/Currency-Converter/'));
 }
 function displayProjects() {
+    initProjects();
     for(let i = 0; i < projects.length; i++)UI.projects.insertAdjacentHTML('beforeend', `<div class="projects__container__card">\n				<div class="projects__container__card__image">\n					<img src="${projects[i].image}" alt="${projects[i].name}">\n				</div>\n				<div class="projects__container__card__info">\n					<h4>${projects[i].title}</h4>\n					<p>${projects[i].description}</p>\n					<div class="projects__container__card__info__buttons">\n						<a target="_blank" href="${projects[i].link}">View Site</a>\n						<a target="_blank" href="${projects[i].code}">View Code</a>\n					</div>\n				</div>\n			</div>`);
 }
-initProjects();
 displayProjects();
 
 },{"2747087ae31630ac":"8qr7H","8abd61d9ce217c3f":"7sRCY","b93e4beaca1ea2ad":"6URvd","b3f0a952c65bbc11":"c2QMw","3f5c39c21f2a8b0f":"hN8mj","2da224b5005db528":"jpT0W"}],"8qr7H":[function(require,module,exports) {

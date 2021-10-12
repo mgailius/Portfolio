@@ -13,14 +13,18 @@
 </head>
 <body>
     <header class="wrapper">
-        <nav>
+        <div class="mobilenav">
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="nav">
             <ul>
-                <li><a class="active" href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Mission</a></li>
-                <li><a href="">Skills</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Contacts</a></li>
+                <li><a class="navlink" href="#">Home</a></li>
+                <li><a class="navlink" href="#about">About</a></li>
+                <li><a class="navlink" href="#mission">Mission</a></li>
+                <li><a class="navlink" href="#skills">Skills</a></li>
+                <li><a class="navlink" href="#projects">Projects</a></li>
+                <li><a class="navlink" href="#contacts">Contacts</a></li>
             </ul>
         </nav>
         <div class="landing">
@@ -37,7 +41,7 @@
         </div>
     </header>
     <main class="wrapper">
-        <section class="about">
+        <section class="about" id="about">
             <h3>About</h3>
             <div class="about__cards">
                 <div class="about__cards__card">
@@ -57,13 +61,13 @@
                 </div>
             </div>
         </section>
-        <section class="mission">
+        <section class="mission" id="mission">
             <h3>Mission</h3>
             <div class="mission__block">
                 <img src="img/love.png" alt="love">
                 <div class="mission__block__text">
                     <h2>Search of purpose</h2>
-                    <p>I currently reside in Lithuania but my goal is to move to England and close the gap between my long-distance relationship partner.</p>
+                    <p>I currently reside in Lithuania but my goal is to one day move to England and close the gap between my long-distance relationship partner.</p>
                 </div>
             </div>
             <div class="mission__block">
@@ -74,7 +78,7 @@
                 <img src="img/excellence.png" alt="love">
             </div>
         </section>
-        <section class="skills">
+        <section class="skills" id="skills">
             <h3>Skills</h3>
             <div class="skills__container">
                 <div class="skills__container__block">
@@ -105,11 +109,11 @@
                 </div>
             </div>
         </section>
-        <section class="projects">
+        <section class="projects" id="projects">
             <h3>Projects</h3>
             <div class="projects__container"></div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
             <h3>Contacts</h3>
             <div class="contacts__container">
                 <form action="https://formspree.io/f/xbjqbeqb" method="POST">
